@@ -15,7 +15,6 @@ def update_accumulators()
     var s3 = sensors["Switch3"]
     
     if power[0] || (s2 == "OFF") || power[2] || power[3] || (s3 == "OFF")
-        # 1. Tentar ler os valores acumulados atuais do canal de leitura
         var client = webclient()
         var url_read = "https://api.thingspeak.com/channels/2881363/feeds.json?api_key=YA4SPF6193RQCBVK&results=1"
         var response = nil
