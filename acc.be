@@ -70,7 +70,6 @@ def update_accumulators()
             connection_failed = false
         end
         
-        # Incrementar com os valores atuais
         if power[0] acc1 += 1 end
         if s2 == "OFF" acc2 += 1 end
         if power[2] acc3 += 1 end
