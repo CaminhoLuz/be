@@ -8,7 +8,6 @@ var connection_failed = false
 
 # Função para atualizar os acumuladores
 def update_accumulators()
-    # 0. Ler o estado dos POWERs
     var power = tasmota.get_power()
     var sensors = json.load(tasmota.read_sensors())
     var s2 = sensors["Switch2"]
@@ -112,3 +111,4 @@ def update_accumulators()
         end
     end
 end
+tasmota.add_cron("0 */1 * * * *", /-> update_accumulators())   
